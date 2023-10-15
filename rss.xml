@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Lowgiant]]></title><description><![CDATA[Hello :)]]></description><link>https://lowgiant.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 Oct 2023 14:29:02 GMT</lastBuildDate><item><title><![CDATA[1주차-Git]]></title><description><![CDATA[Git 기본 명령어 및 사용법 clone 원격 저장소의 코드를 복제하여 로컬 환경에 가져옴 사용 방법 git clone '레포지토리명' branch 새로운 브랜치를 생성하거나 현재 존재하는 브랜치를 확인할 때 사용  사용 방법 git branch…]]></description><link>https://lowgiant.github.io/1-week/</link><guid isPermaLink="false">https://lowgiant.github.io/1-week/</guid><pubDate>Sun, 15 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Git 기본 명령어 및 사용법&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Lowgiant]]></title><description><![CDATA[Hello :) ]]></description><link>https://lowgiant.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 Oct 2023 14:34:18 GMT</lastBuildDate><item><title><![CDATA[1주차-Git]]></title><description><![CDATA[Git 기본 명령어 및 사용법 clone 원격 저장소의 코드를 복제하여 로컬 환경에 가져옴 사용 방법 git clone '레포지토리명' branch 새로운 브랜치를 생성하거나 현재 존재하는 브랜치를 확인할 때 사용  사용 방법 git branch…]]></description><link>https://lowgiant.github.io/OSSCA-1-week/</link><guid isPermaLink="false">https://lowgiant.github.io/OSSCA-1-week/</guid><pubDate>Sun, 15 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Git 기본 명령어 및 사용법&lt;/h2&gt;
 &lt;h3&gt;clone&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;원격 저장소의 코드를 복제하여 로컬 환경에 가져옴&lt;/li&gt;
@@ -71,7 +71,7 @@
 &lt;li&gt;git cherry-pick &amp;#x3C;commit_hash&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2주차-Redis Build]]></title><description><![CDATA[Redis Build 작업 환경 인텔 맥 make release.h 없다는 에러 발생  redis issue check mkreleasehdr.sh 문제 였음 위 링크를 통해서 인코딩 문제를 확인(헉.. 멘토님 2012 작성된 글 발견..) dos…]]></description><link>https://lowgiant.github.io/2-week/</link><guid isPermaLink="false">https://lowgiant.github.io/2-week/</guid><pubDate>Sun, 15 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Redis Build&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2주차-Redis Build]]></title><description><![CDATA[Redis Build 작업 환경 인텔 맥 make release.h 없다는 에러 발생  redis issue check mkreleasehdr.sh 문제 였음 위 링크를 통해서 인코딩 문제를 확인(헉.. 멘토님 2012 작성된 글 발견..) dos…]]></description><link>https://lowgiant.github.io/OSSCA-2-week/</link><guid isPermaLink="false">https://lowgiant.github.io/OSSCA-2-week/</guid><pubDate>Sun, 15 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Redis Build&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;작업 환경&lt;/p&gt;
