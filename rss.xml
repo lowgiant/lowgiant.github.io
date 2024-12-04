@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Lowgiant]]></title><description><![CDATA[Hello :) ]]></description><link>https://lowgiant.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 29 Nov 2024 13:38:18 GMT</lastBuildDate><item><title><![CDATA[[MSA-10] retrospect]]></title><description><![CDATA[1. Spring Cloud 컨테이너 기반 한계 서비스가 J커브를 그리게 되면 스케일링(scale-up / scale out…]]></description><link>https://lowgiant.github.io/MSA-retrospect/</link><guid isPermaLink="false">https://lowgiant.github.io/MSA-retrospect/</guid><pubDate>Fri, 29 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;1. Spring Cloud 컨테이너 기반 한계&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Lowgiant]]></title><description><![CDATA[Hello :) ]]></description><link>https://lowgiant.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 04 Dec 2024 14:25:57 GMT</lastBuildDate><item><title><![CDATA[[api-1] 문서 제작 방식]]></title><description><![CDATA[1. 간단한 Api 문서, 노션 신규 프로젝트나 사이드 프로젝트에서는 백엔드 기획자가 노션이나 Jira를 사용하여 API 문서의 초안을 작성하는 경우가 많습니다. 이 방법은 API 수가 적을 때 효과적이지만, API…]]></description><link>https://lowgiant.github.io/api-doc/</link><guid isPermaLink="false">https://lowgiant.github.io/api-doc/</guid><pubDate>Wed, 04 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;1. 간단한 Api 문서, 노션&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;신규 프로젝트나 사이드 프로젝트에서는 백엔드 기획자가 노션이나 Jira를 사용하여 API 문서의 초안을 작성하는 경우가 많습니다.&lt;/li&gt;
+&lt;li&gt;이 방법은 API 수가 적을 때 효과적이지만, API 수가 증가하면 문서 업데이트가 지연되어 클라이언트와의 협업에 문제가 생길 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2. 간편한 스웨거&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Swagger는 라이브러리 의존성 추가만으로 API 문서를 자동 생성할 수 있어 편리합니다.
+하지만 세부적인 문서 작성을 위해서는 코드 레벨에서 어노테이션을 사용해야 하는 추가 작업이 필요합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. 테스트 코드 기반, Spring REST Docs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Spring REST Docs는 API의 테스트 코드가 성공하면 자동으로 AsciiDoc 형식의 문서를 생성합니다. &lt;/li&gt;
+&lt;li&gt;이 방법은 코드와 문서를 분리하여 관리할 수 있는 장점이 있습니다. 다만, 초기 설정과 테스트 코드 작성에 대한 진입 장벽이 있을 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;4. 마치며&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;각 방법은 프로젝트의 규모, 팀의 기술 스택, 문서화 요구사항에 따라 선택할 수 있습니다. &lt;/li&gt;
+&lt;li&gt;노션이나 Jira는 빠른 시작과 유연성이 필요할 때, Swagger는 빠른 문서화와 API 테스트가 필요할 때, Spring REST Docs는 정확성과 유지보수성이 중요할 때 적합할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[MSA-10] retrospect]]></title><description><![CDATA[1. Spring Cloud 컨테이너 기반 한계 서비스가 J커브를 그리게 되면 스케일링(scale-up / scale out…]]></description><link>https://lowgiant.github.io/MSA-retrospect/</link><guid isPermaLink="false">https://lowgiant.github.io/MSA-retrospect/</guid><pubDate>Fri, 29 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;1. Spring Cloud 컨테이너 기반 한계&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;서비스가 J커브를 그리게 되면 스케일링(scale-up / scale out)하는 부분에서 유연하게 처리하기 어렵습니다. 특히 장애가 발생하게 되면 자동으로 복구시키는 부분을 앤시블만으로 관리하기가 어렵죠.&lt;/li&gt;
 &lt;li&gt;이러한 문제를 해결하기 위해서 오토스케일링이 가능한 K8S로 보통 넘어갑니다. 이때 기존에 코드 환경에서 크게 달라지지는 않습니다. 조직마다 운영하는 환경에 따라 다릅니다.&lt;/li&gt;
