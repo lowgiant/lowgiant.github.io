@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Lowgiant]]></title><description><![CDATA[Hello :) ]]></description><link>https://lowgiant.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 05 Dec 2024 14:51:24 GMT</lastBuildDate><item><title><![CDATA[[api-2] MSA 환경 문서정리]]></title><description><![CDATA[1. MSA 환경, API 문서 관리 MSA 환경은 각 서비스 별로 스웨거나, Spring REST Docs 중 택해서 프로젝트 초반에 컨트롤러 부분을 작성과 동시에 Mock으로 만듭니다. 각 서비스별로 특정 문서 위치를 url…]]></description><link>https://lowgiant.github.io/api-doc-msa/</link><guid isPermaLink="false">https://lowgiant.github.io/api-doc-msa/</guid><pubDate>Thu, 05 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;1. MSA 환경, API 문서 관리&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Lowgiant]]></title><description><![CDATA[Hello :) ]]></description><link>https://lowgiant.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 06 Dec 2024 14:51:25 GMT</lastBuildDate><item><title><![CDATA[[test-1] Life Cycle]]></title><description><![CDATA[1. 제일 처음, @BeforeAll 해당 테스트 파일의 모든 테스트 메서드가 실행되기 전에 단 한 번 실행됩니다. 주로 데이터베이스 연결이나 모든 테스트에 공유할 리소스 초기화 할 때 사용합니다. 2. 테스트 실행 전, @BeforeEach…]]></description><link>https://lowgiant.github.io/test-life-cycle/</link><guid isPermaLink="false">https://lowgiant.github.io/test-life-cycle/</guid><pubDate>Fri, 06 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;1. 제일 처음, @BeforeAll&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;해당 테스트 파일의 모든 테스트 메서드가 실행되기 전에 단 한 번 실행됩니다.&lt;/li&gt;
+&lt;li&gt;주로 데이터베이스 연결이나 모든 테스트에 공유할 리소스 초기화 할 때 사용합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2. 테스트 실행 전, @BeforeEach&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;각 테스트 메서드가 실행되기 직전에 실행됩니다. 각 테스트에 필요한 객체 초기화나 상태 리셋에 사용됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. 테스트 실행, @Test&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;실제 테스트 로직이 포함된 메서드에 사용됩니다. 각 테스트 메서드는 독립적으로 실행됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;4. 테스트 실행 후, @AfterEach&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;각 테스트 메서드가 실행된 직후에 실행됩니다 각 테스트 후 정리 작업이나 리소스 해제에 사용됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;5. 마지막, @AfterAll&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 테스트 메서드가 실행된 후 마지막에 한 번 실행됩니다. &lt;/li&gt;
+&lt;li&gt;전체 테스트 클래스에서 사용한 리소스 정리에 사용할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;6. 샘플 코드&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token import&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;junit&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jupiter&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token import static&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;junit&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jupiter&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Assertions&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;LifecycleDemoTest&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;StringBuilder&lt;/span&gt; output&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@BeforeAll&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setUpAll&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        output &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        output&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;1. @BeforeAll 실행\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@BeforeEach&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setUp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        output&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;2. @BeforeEach 실행\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@Test&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;firstTest&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        output&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;3. 첫 번째 @Test 실행\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@Test&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;secondTest&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        output&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;3. 두 번째 @Test 실행\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;assertTrue&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@AfterEach&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;tearDown&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        output&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;4. @AfterEach 실행\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@AfterAll&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;tearDownAll&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        output&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;5. @AfterAll 실행\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;output&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;7. 마치며&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;JUnit 5는 기본적으로 각 테스트 메서드마다 새로운 테스트 클래스 인스턴스를 생성합니다. &lt;/li&gt;
+&lt;li&gt;@BeforeAll과 @AfterAll 메서드는 인스턴스가 존재하지 않는 시점에 실행되어야 하기 때문에 static으로 선언되어야 합니다. &lt;/li&gt;
+&lt;li&gt;그러나 JUnit 5에서는 @TestInstance(TestInstance.Lifecycle.PER_CLASS) 어노테이션을 사용하여 클래스당 하나의 인스턴스를 생성하는 방식도 지원합니다. 이 경우 @BeforeAll과 @AfterAll 메서드를 non-static으로 선언할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;8. 출처&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://junit.org/junit5/docs/current/user-guide&quot;&gt;junit5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/beforeall-and-afterall-in-non-static-methods/&quot;&gt;beforeall and afterall&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[api-2] MSA 환경 문서정리]]></title><description><![CDATA[1. MSA 환경, API 문서 관리 MSA 환경은 각 서비스 별로 스웨거나, Spring REST Docs 중 택해서 프로젝트 초반에 컨트롤러 부분을 작성과 동시에 Mock으로 만듭니다. 각 서비스별로 특정 문서 위치를 url…]]></description><link>https://lowgiant.github.io/api-doc-msa/</link><guid isPermaLink="false">https://lowgiant.github.io/api-doc-msa/</guid><pubDate>Thu, 05 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;1. MSA 환경, API 문서 관리&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;MSA 환경은 각 서비스 별로 스웨거나, Spring REST Docs 중 택해서 프로젝트 초반에 컨트롤러 부분을 작성과 동시에 Mock으로 만듭니다. 각 서비스별로 특정 문서 위치를 url을 알려줘서 접근 할 수 있도록 합니다. &lt;/li&gt;
 &lt;li&gt;이렇게 할 경우에는 서비스가 손가락을 셀 수 있을 경우에는 머릿속으로 기억해서 해당 서비스별로 문서를 찾아 들어갈 수 있습니다. &lt;/li&gt;
